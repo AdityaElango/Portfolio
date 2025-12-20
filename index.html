@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    ============================================
+    ADITYA ELANGO - PORTFOLIO WEBSITE
+    ============================================
+    
+    This portfolio website showcases:
+    - Professional experience and education
+    - Technical skills across AI/ML, Full Stack, Cloud/DevOps
+    - Featured and categorized projects
+    - Research publications
+    - Achievements and certifications
+    - Contact information
+    
+    Technologies Used:
+    - HTML5 semantic markup
+    - CSS3 with custom properties (variables)
+    - Vanilla JavaScript (no frameworks)
+    - Particles.js for animated backgrounds
+    - VanillaTilt.js for 3D card effects
+    - Font Awesome icons
+    - Google Fonts (Poppins, Inter)
+    
+    Design Features:
+    - Dark theme with red accent color
+    - Glassmorphism effects
+    - 3D tilt animations on cards
+    - Smooth scroll animations
+    - Responsive mobile-first design
+    - Category filtering for projects
+    
+    Author: Aditya Elango
+    ============================================
+-->
+<head>
+    <!-- Meta tags for SEO and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aditya Elango - AI/ML Engineer, Full Stack Developer, Cloud & DevOps Specialist">
+    <meta name="theme-color" content="#f8f9fa">
+    
+    <title>Aditya Elango | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- VanillaTilt for 3D Tilt Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION BAR
+         ============================================
+         Fixed top navigation with:
+         - Logo/brand
+         - Menu links to all sections
+         - Hamburger menu for mobile
+         - Scroll progress indicator
+         Handled by: Navigation class in script.js
+         ============================================ -->
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-progress">
+             <span id="nav-progress-bar"></span>
+        </div>
+
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#home" class="logo-text">📂 Portfolio</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#career" class="nav-link">Career</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+    <!-- ============================================
+         HERO SECTION
+         ============================================
+         Landing section with:
+         - Profile image with 3D tilt effect
+         - Name and title
+         - Call-to-action buttons
+         - Particles.js animated background
+         - Scroll indicator
+         ============================================ -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <!-- Banner removed per request; using CSS background instead -->
+            <div class="hero-overlay"></div>
+        </div>
+        <div id="particles-js"></div>
+
+        <div class="hero-content">
+                <div class="hero-profile-section">
+                <img 
+                    src="photos/Aditya.jpg" 
+                    alt="Aditya Elango" 
+                    class="hero-profile-image card-3d red-glow-hover tilt-card profile-image"
+                    data-tilt>
+                <div class="hero-text">
+                    <h1 class="hero-title">Aditya Elango</h1>
+                    <p class="hero-subtitle">AI / ML • Full Stack • Cloud & DevOps Engineer</p>
+                    <p class="hero-tagline">
+                        Final-year Computer Science student with hands-on experience in AI/ML, Full-Stack systems, and cloud infrastructure.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">▶ View My Work</a>
+                        <a href="#contact" class="btn btn-secondary"> ☎ Contact Me</a>
+                        <a href="Aditya_Elango_Resume.pdf" download class="btn btn-outline btn-accent"> ⤓ Download Resume (PDF)</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="text">Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================
+         Personal introduction with:
+         - About me text/bio
+         - Statistics (Projects, Publications, Certifications)
+         - Professional photo
+         - Fade-in scroll animation
+         ============================================ -->
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-scroll>
+                    <p>
+                        Enthusiastic Computer Science undergraduate with strong foundations in Artificial Intelligence, 
+                        Machine Learning, Full Stack Development, and Cloud & DevOps. Experienced in building scalable systems, 
+                        deploying containerized microservices, and applying machine learning to real-world problems. Passionate 
+                        about data-driven decision making, automation, and collaborative problem-solving.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>8+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Publications</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4+</h3>
+                            <p>Certifications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image card-3d red-glow-hover tilt-card" data-tilt>
+                    <img 
+                        src="photos/Aditya_Photo.jpg" 
+                        alt="Aditya Elango Profile Photo" 
+                        data-scroll 
+                        class="card-3d profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================
+         CAREER & EDUCATION SECTION
+         ============================================
+         Two-column timeline layout showing:
+         LEFT: Education history (B.Tech details)
+         RIGHT: Work experience (internships, roles)
+         Features:
+         - Vertical timeline with animated dots
+         - Cards with date, title, organization
+         - Particles.js background effect
+         - Hover effects on timeline items
+         ============================================ -->
+    <!-- Career & Education Section -->
+<section id="career" class="career">
+    <div id="career-particles"></div>
+  <div class="container">
+    <h2 class="section-title">Career & Education</h2>
+
+    <div class="career-grid">
+      
+      <!-- EDUCATION -->
+      <div class="career-column">
+        <h3 class="career-heading">
+          <i class="fas fa-graduation-cap"></i> Education
+        </h3>
+
+        <div class="timeline">
+         <span class="timeline-dot1"></span>
+                    <div class="timeline-item" data-scroll>
+                        <div class="timeline-card card-3d">
+              <span class="timeline-date">SEPT 2022 – JUNE 2026</span>
+              <h4>B.Tech – Computer Science & Engineering</h4>
+              <p class="timeline-org">Amrita Vishwa Vidyapeetham, Bengaluru</p>
+              <p><strong>CGPA:</strong> 7.55</p>
+            </div>
+          </div>
+          
+          <span class="timeline-dot2"></span> 
+                    <div class="timeline-item" data-scroll>
+                        <div class="timeline-card card-3d">
+              <span class="timeline-date">JUNE 2021 – AUGUST 2022</span>
+              <h4>CBSE 12th Grade</h4>
+              <p class="timeline-org">NARAYANA E TECHNO SCHOOL VIDYARANYAPURA BLORE KK</p>
+              <p><strong>Percentage:</strong> 76%</p>
+            </div>
+          </div>
+
+          <span class="timeline-dot3"></span>
+                    <div class="timeline-item" data-scroll> 
+                        <div class="timeline-card card-3d">
+              <span class="timeline-date">JUNE 2019 – MARCH 2020</span>
+              <h4>CBSE 10th Grade</h4>
+              <p class="timeline-org">NARAYANA OLYMPIAD SCH SAHAKARANAGAR BANGALORE KK</p>
+               <p><strong>Percentage:</strong> 91.2%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- EXPERIENCE -->
+      <div class="career-column">
+        <h3 class="career-heading">
+          <i class="fas fa-briefcase"></i> Experience
+        </h3>
+
+        <div class="timeline">
+            <span class="timeline-dot1"></span>
+          <div class="timeline-item" data-scroll>
+             <div class="timeline-card">
+              <span class="timeline-date">MAY 2025 – JULY 2025</span>
+              <h4>DevOps and Cloud Intern</h4>
+              <p class="timeline-org" ><i class="fas fa-building"></i> Hexaware Technologies – Onsite (Chennai)</p>
+              <ul>
+                <li>Executed 25+ hands-on SDLC and DevOps labs, applying Agile practices, CI/CD concepts, and version control workflows across simulated enterprise scenarios.</li>
+                <li>Built and deployed containerized workloads using Docker and Kubernetes, gaining experience with image creation, pod deployment, and basic service orchestration.</li>
+                <li>Provisioned and managed Azure cloud resources and implemented infrastructure automation basics using Terraform and YAML configurations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- ============================================
+         SKILLS & EXPERTISE SECTION
+         ============================================
+         Grid of skill categories:
+         - Programming Languages
+         - AI/ML Technologies
+         - Full Stack Development
+         - Cloud & DevOps
+         - Tools & Platforms
+         - Soft Skills
+         Each category has icon and skill tags
+         ============================================ -->
+    <!-- Skills Section (UNCHANGED) -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category" data-scroll>
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-code"></i> Programming
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> C/C++</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> Bash</span>
+                    </div>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="skill-category" data-scroll>
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-brain"></i> AI / ML / DL / LLM / NLP
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> TensorFlow</span>
+                        <span class="skill-tag"><i class="fas fa-cube"></i> PyTorch</span>
+                        <span class="skill-tag"><i class="fas fa-brain"></i> Keras</span>
+                        <span class="skill-tag"><i class="fas fa-robot"></i> Ollama</span>
+                        <span class="skill-tag"><i class="fas fa-chart-bar"></i> Scikit-learn</span>
+                        <span class="skill-tag"><i class="fas fa-layer-group"></i> LSTM</span>
+                        <span class="skill-tag"><i class="fas fa-sitemap"></i> XGBoost</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Radom Forest</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> LightGBM</span>
+                        <span class="skill-tag"><i class="fas fa-language"></i> Hugging Face</span>
+                    </div>
+                </div>
+
+                <!-- Full Stack -->
+                <div class="skill-category" data-scroll>
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-palette"></i> Full Stack
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-react"></i> React.js</span>
+                        <span class="skill-tag"><i class="fas fa-zap"></i> Next.js</span>
+                        <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
+                        <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="skill-category" data-scroll>
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-cloud"></i> Cloud & DevOps
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> Azure</span>
+                        <span class="skill-tag"><i class="fab    fa-docker"></i> Docker</span>
+                        <span class="skill-tag"><i class="fas fa-cube"></i> Kubernetes</span>
+                        <span class="skill-tag"><i class="fas fa-cog"></i> Terraform</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> Jenkins</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category" data-scroll>
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-tools"></i> Tools
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git/GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-stream"></i> Streamlit</span>
+                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Power BI</span>
+                        <span class="skill-tag"><i class="fas fa-chart-pie"></i> Tableau</span>
+                        <span class="skill-tag"><i class="fas fa-fire"></i> Firebase</span>
+                        <span class="skill-tag"><i class="fas fa-rocket"></i> Vercel</span>
+                        <span class="skill-tag"><i class="fas fa-cloud-upload-alt"></i> Render</span>
+                        <span class="skill-tag"><i class="fas fa-sliders-h"></i> Gradio</span>
+                        <span class="skill-tag"><i class="fas fa-pen-nib"></i> Figma</span>
+                        
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category" data-scroll>
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-palette"></i> Soft Skills
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-brain"></i> Analytical Thinking</span>
+                        <span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+                        <span class="skill-tag"><i class="fab fa-users"></i> Leadership</span>
+                        <span class="skill-tag"><i class="fas fa-sync-alt"></i> Adaptability</span>
+                        <span class="skill-tag"><i class="fas fa-people-carry"></i>Team Collaboration</span>
+                        <span class="skill-tag"><i class="fas fa-calendar-check"></i> Event Management</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS SECTION
+         ============================================
+         Two subsections:
+         
+         1. FEATURED PROJECTS:
+            - 3-column grid of best projects
+            - Special featured badge
+            - Larger cards with more emphasis
+         
+         2. ALL PROJECTS:
+            - Filterable grid (AI/ML, Full Stack, etc.)
+            - Category filter buttons
+            - Shows all projects with filtering
+         
+         Each project card contains:
+         - Title and category
+         - Description
+         - Key highlights (bullet points)
+         - Technology stack badges
+         - GitHub link and View Details button
+         
+         Managed by:
+         - renderProjectsSection() in script.js
+         - ProjectsManager class for filtering
+         - Particles.js background effect
+         ============================================ -->
+    <!-- Projects Section (STATIC CARDS + JS FILTER) -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div id="projects-particles"></div>
+
+            <!-- ⭐ Featured Projects -->
+            <div class="featured-projects-wrapper">
+                <h3 class="featured-label">
+                    <i class="fas fa-star"></i> Featured Projects (Best Work)
+                </h3>
+                <div class="projects-grid featured-grid" id="featured-projects-grid">
+                    <!-- Featured Project 1 -->
+                    <div class="project-card featured-project card-3d" data-scroll data-categories="AI/ML,Full Stack,Assistive Technology">
+                        <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
+                        <h3 class="project-title">Smart Assistive Learning System for Dyslexia &amp; Dysgraphia</h3>
+                        <p class="project-category"><strong>Category:</strong> AI/ML · Full Stack · Assistive Technology</p>
+                        <p class="project-description">AI-driven platform that analyzes handwriting and speech to detect dyslexia and dysgraphia patterns and track learning progress.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Python</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Machine Learning</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Deep Learning</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> CNN</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Node.js</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> MongoDB</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <button class="view-details-btn btn btn-secondary">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Featured Project 2 -->
+                    <div class="project-card featured-project card-3d" data-scroll data-categories="AI/ML,NLP,Cloud/Blockchain,Full Stack">
+                        <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
+                        <h3 class="project-title">Insightify – Automated Legal &amp; Financial Document Analyzer</h3>
+                        <p class="project-category"><strong>Category:</strong> AI/ML · NLP · Cloud · Full Stack</p>
+                        <p class="project-description">Automated NLP system that extracts key attributes and summaries from large-scale legal and financial documents.</p>
+                        <ul class="project-highlights">
+                            <li><i class="fas fa-check-circle"></i> NLP-based information extraction and summarization</li>
+                            <li><i class="fas fa-check-circle"></i> Full-stack cloud deployment</li>
+                            <li><i class="fas fa-check-circle"></i> Scalable architecture for large document volumes</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Python</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> NLP</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> RoBERTa</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> React</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Node.js</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> MongoDB</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Vercel</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Render</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <button class="view-details-btn btn btn-secondary">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Featured Project 3 -->
+                    <div class="project-card featured-project card-3d" data-scroll data-categories="Full Stack">
+                        <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
+                        <h3 class="project-title">Budget Buddy – Smart Expense Tracker</h3>
+                        <p class="project-category"><strong>Category:</strong> Full Stack Web Development</p>
+                        <p class="project-description">Full-stack expense tracking application with secure authentication and real-time budgeting analytics.</p>
+                        <ul class="project-highlights">
+                            <li><i class="fas fa-check-circle"></i> Interactive budgeting and analytics dashboards</li>
+                            <li><i class="fas fa-check-circle"></i> Secure login and role-based access control</li>
+                            <li><i class="fas fa-check-circle"></i> Responsive and user-friendly UI</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-badge"><i class="fas fa-tag"></i> React</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> Node.js</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> MongoDB</span>
+                            <span class="tech-badge"><i class="fas fa-tag"></i> MySQL</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <button class="view-details-btn btn btn-secondary">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Filters/Tabs -->
+            <div class="projects-filter-wrapper">
+                <h3 class="all-projects-label">
+                    <i class="fas fa-folder-open"></i> All Projects (Categorized)
+                </h3>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-category="All">
+                        <i class="fas fa-th"></i> All Projects
+                    </button>
+                    <button class="filter-btn" data-category="AI/ML">
+                        <i class="fas fa-brain"></i> AI / ML
+                    </button>
+                    <button class="filter-btn" data-category="Full Stack">
+                        <i class="fas fa-code"></i> Full Stack
+                    </button>
+                    <button class="filter-btn" data-category="Cloud/Blockchain">
+                        <i class="fas fa-link"></i> Cloud / Blockchain
+                    </button>
+                </div>
+            </div>
+
+            <!-- 📂 All Projects Grid (static cards) -->
+            <div class="projects-grid all-projects-grid" id="projects-grid">
+                <!-- Credit Risk -->
+                <div class="project-card card-3d" data-scroll data-categories="AI/ML,Data">
+                    <h3 class="project-title">Interpretable Credit Risk Prediction Using PCA &amp; Bayesian Models</h3>
+                    <p class="project-description"><strong>Domain:</strong> <i class="fas fa-brain domain-icon"></i> Machine Learning · Data Science</p>
+                    <p class="project-description">Interpretable credit risk pipeline over 338K+ borrower records with PCA-based feature reduction and statistically validated models.</p>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> 338,000+ records processed</li>
+                        <li><i class="fas fa-check-circle"></i> 64% feature reduction with 90% variance retained</li>
+                        <li><i class="fas fa-check-circle"></i> Statistically validated using ANOVA and reliability metrics</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Python</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> PCA</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Bayesian Models</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> LDA</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> QDA</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Statistical Analysis</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <button class="view-details-btn btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ride-Hailing -->
+                <div class="project-card card-3d" data-scroll data-categories="AI/ML,Big Data">
+                    <h3 class="project-title">Ride Hailing Demand Forecasting and Driver Reallocation System</h3>
+                    <p class="project-description"><strong>Domain:</strong> <i class="fas fa-chart-line domain-icon"></i> Machine Learning · Big Data</p>
+                    <p class="project-description">Spark-based forecasting pipeline for zone-level hourly demand and supply with optimized driver reallocation strategies.</p>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> Zone-level hourly demand prediction</li>
+                        <li><i class="fas fa-check-circle"></i> Achieved RMSE ≈ 2.7 in forecasting</li>
+                        <li><i class="fas fa-check-circle"></i> Improved demand–supply matching in simulations</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Python</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Apache Spark</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> CatBoost</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Big Data Analytics</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <button class="view-details-btn btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- News Clustering -->
+                <div class="project-card card-3d" data-scroll data-categories="NLP,Big Data">
+                    <h3 class="project-title">News Article Clustering and Topic Modeling Using Spark</h3>
+                    <p class="project-description"><strong>Domain:</strong> <i class="fas fa-newspaper domain-icon"></i> NLP · Big Data</p>
+                    <p class="project-description">Scalable Spark-based pipeline for clustering thousands of news articles using topic modeling and clustering techniques.</p>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> Thousands of articles clustered</li>
+                        <li><i class="fas fa-check-circle"></i> Silhouette score up to 0.75 using DBSCAN</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Python</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Apache Spark</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> NLP</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> LDA</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> KMeans</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> DBSCAN</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <button class="view-details-btn btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Exam Attendance -->
+                <div class="project-card card-3d" data-scroll data-categories="Security,Distributed Systems,Cloud/Blockchain">
+                    <h3 class="project-title">Secure and Tamper Proof Exam Center Attendance System</h3>
+                    <p class="project-description"><strong>Domain:</strong> <i class="fas fa-shield-alt domain-icon"></i> Security · Distributed Systems</p>
+                    <p class="project-description">Multi-factor exam center attendance system combining NFC, encrypted QR codes, and decentralized storage for fast, tamper-proof validation.</p>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> Attendance validated in under 5 seconds per student</li>
+                        <li><i class="fas fa-check-circle"></i> Tested across 250+ validation cases with full integrity</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Encryption</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Authentication</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> NFC</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> IPFS</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Distributed Systems</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <button class="view-details-btn btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MedSync -->
+                <div class="project-card card-3d" data-scroll data-categories="Blockchain,Healthcare Systems,Cloud/Blockchain">
+                    <h3 class="project-title">MedSync Secure Distributed Patient Records Platform</h3>
+                    <p class="project-description"><strong>Domain:</strong> <i class="fas fa-link domain-icon"></i> Blockchain · Healthcare Systems</p>
+                    <p class="project-description">Decentralized healthcare records platform with secure access control, immutable storage, and faster data retrieval.</p>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> Achieved ~40% faster data retrieval</li>
+                        <li><i class="fas fa-check-circle"></i> Enabled tamper-proof auditability of medical records</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Ethereum</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Smart Contracts</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> IPFS</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Web Security</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <button class="view-details-btn btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mental Wellness -->
+                <div class="project-card card-3d" data-scroll data-categories="Full Stack">
+                    <h3 class="project-title">Mental Wellness Website</h3>
+                    <p class="project-description"><strong>Domain:</strong> <i class="fas fa-globe domain-icon"></i> Full Stack Web Development</p>
+                    <p class="project-description">Responsive mental wellness platform with quizzes, journaling, activities, and meditation tools focused on accessibility and UX.</p>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> Multiple interactive features for user engagement</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive design across devices</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Java</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> Spring Boot</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> MySQL</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> HTML</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> CSS</span>
+                        <span class="tech-badge"><i class="fas fa-tag"></i> JavaScript</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="YOUR_GITHUB_LINK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <button class="view-details-btn btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PUBLICATIONS & RESEARCH SECTION
+         ============================================
+         Timeline-style list of academic publications:
+         - Conference papers
+         - Research projects
+         - Awards and recognitions
+         
+         Each publication card shows:
+         - Title
+         - Conference and institution
+         - Summary/abstract
+         - Key technology tags
+         - Links to paper and certificates
+         
+         First publication with award gets special
+         "featured" styling with trophy icon
+         
+         Managed by: renderPublicationsSection() in script.js
+         ============================================ -->
+    <!-- Publications Section (STATIC CARDS) -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-book"></i> Publications & Research</h2>
+            <p class="section-subtitle">
+                Peer-reviewed publications and research projects with real-world impact.
+            </p>
+
+            <div class="publications-list">
+                <!-- Publication 1 -->
+                <div class="publication-item card-3d featured-pub" data-scroll>
+                    <div class="pub-header">
+                        <div class="pub-badge award-badge">
+                            <i class="fas fa-trophy"></i> Best Paper Award
+                        </div>
+                        <h3 class="pub-title">
+                            Predictive Analytics: A Machine Learning Approach for Food Production and Sales
+                        </h3>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-conference">
+                            <i class="fas fa-calendar-alt"></i>
+                            <strong>COMP-SIF 2025</strong>
+                        </span>
+                        <span class="pub-venue">
+                            <i class="fas fa-map-marker-alt"></i>
+                            BMSIT&amp;M
+                        </span>
+                    </div>
+                    <p class="pub-description">
+                        Achieved 94% prediction accuracy using LSTM and XGBoost models with Explainable AI.
+                    </p>
+                    <div class="pub-highlights">
+                        <span class="highlight-tag"><i class="fas fa-check"></i> LSTM</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> XGBoost</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> SHAP</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> LIME</span>
+                    </div>
+                    <div class="pub-links">
+                        <a href="PAPER_LINK" target="_blank" class="btn btn-outline">View Paper</a>
+                        <a href="CERTIFICATE_LINK" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="publication-item card-3d" data-scroll>
+                    <div class="pub-header">
+                        <h3 class="pub-title">FlexAssist: Sensor-Based Glove for Hand Function Assessment</h3>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-conference">
+                            <i class="fas fa-calendar-alt"></i>
+                            <strong>STCR 2025</strong>
+                        </span>
+                        <span class="pub-venue">
+                            <i class="fas fa-map-marker-alt"></i>
+                            BIT Sathy
+                        </span>
+                    </div>
+                    <p class="pub-description">
+                        Developed an ESP32-based glove streaming sensor data into ML models.
+                    </p>
+                    <div class="pub-highlights">
+                        <span class="highlight-tag"><i class="fas fa-check"></i> ESP32</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> Sensors</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> ML</span>
+                    </div>
+                    <div class="pub-links">
+                        <a href="PAPER_LINK" target="_blank" class="btn btn-outline">View Paper</a>
+                        <a href="CERTIFICATE_LINK" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Publication 3 -->
+                <div class="publication-item card-3d" data-scroll>
+                    <div class="pub-header">
+                        <h3 class="pub-title">
+                            Secure and Tamper-Proof Exam Center Attendance System Using NFC and Encrypted QR Codes
+                        </h3>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-conference">
+                            <i class="fas fa-calendar-alt"></i>
+                            <strong>ICECA 2025</strong>
+                        </span>
+                        <span class="pub-venue">
+                            <i class="fas fa-map-marker-alt"></i>
+                            IEEE
+                        </span>
+                    </div>
+                    <p class="pub-description">
+                        Proposed a multi-factor attendance framework with sub-5 second verification.
+                    </p>
+                    <div class="pub-highlights">
+                        <span class="highlight-tag"><i class="fas fa-check"></i> NFC</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> Encryption</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> IPFS</span>
+                    </div>
+                    <div class="pub-links">
+                        <a href="PAPER_LINK" target="_blank" class="btn btn-outline">View Paper</a>
+                        <a href="CERTIFICATE_LINK" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Publication 4 -->
+                <div class="publication-item card-3d" data-scroll>
+                    <div class="pub-header">
+                        <h3 class="pub-title">
+                            MedSync: Secure Distributed Patient Records and Lab Sample Tracking
+                        </h3>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-conference">
+                            <i class="fas fa-calendar-alt"></i>
+                            <strong>ICEAMST 2025</strong>
+                        </span>
+                    </div>
+                    <p class="pub-description">
+                        Presented a blockchain-based healthcare record management system.
+                    </p>
+                    <div class="pub-highlights">
+                        <span class="highlight-tag"><i class="fas fa-check"></i> Blockchain</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> Healthcare</span>
+                    </div>
+                    <div class="pub-links">
+                        <a href="PAPER_LINK" target="_blank" class="btn btn-outline">View Paper</a>
+                        <a href="CERTIFICATE_LINK" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Publication 5 -->
+                <div class="publication-item card-3d" data-scroll>
+                    <div class="pub-header">
+                        <h3 class="pub-title">Finite Automata for NPC Behavior Modeling in Video Games</h3>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-conference">
+                            <i class="fas fa-calendar-alt"></i>
+                            <strong>GCAT 2024</strong>
+                        </span>
+                        <span class="pub-venue">
+                            <i class="fas fa-map-marker-alt"></i>
+                            NCET Bengaluru
+                        </span>
+                    </div>
+                    <p class="pub-description">
+                        Designed adaptive NPC behavior models using finite automata.
+                    </p>
+                    <div class="pub-highlights">
+                        <span class="highlight-tag"><i class="fas fa-check"></i> Finite Automata</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> Game AI</span>
+                    </div>
+                    <div class="pub-links">
+                        <a href="PAPER_LINK" target="_blank" class="btn btn-outline">View Paper</a>
+                        <a href="CERTIFICATE_LINK" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                    </div>
+                </div>
+
+                <!-- Publication 6 -->
+                <div class="publication-item card-3d" data-scroll>
+                    <div class="pub-header">
+                        <h3 class="pub-title">ConfigMaster: Interactive Configuration System</h3>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-conference">
+                            <i class="fas fa-calendar-alt"></i>
+                            <strong>CSITSS 2025</strong>
+                        </span>
+                        <span class="pub-venue">
+                            <i class="fas fa-map-marker-alt"></i>
+                            RV College of Engineering
+                        </span>
+                    </div>
+                    <p class="pub-description">
+                        Built a Bash-based automation tool for Unix system configuration.
+                    </p>
+                    <div class="pub-highlights">
+                        <span class="highlight-tag"><i class="fas fa-check"></i> Bash</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> Automation</span>
+                        <span class="highlight-tag"><i class="fas fa-check"></i> DevOps</span>
+                    </div>
+                    <div class="pub-links">
+                        <a href="PAPER_LINK" target="_blank" class="btn btn-outline">View Paper</a>
+                        <a href="CERTIFICATE_LINK" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ACHIEVEMENTS SECTION
+         ============================================
+         Grid of milestone cards showing:
+         - Hackathon wins
+         - Leadership positions
+         - Workshop participations
+         - Volunteer work
+         
+         Each card displays:
+         - Icon/emoji
+         - Title
+         - Organization/event
+         - Details or highlights
+         
+         Rendered by: AchievementsManager class in script.js
+         Particles.js background effect
+         ============================================ -->
+    <!-- Achievements Section (MILESTONE CARDS) -->
+    <section id="achievements" class="achievements">
+        <div id="achievements-particles"></div>
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card card-3d" data-scroll>
+                    <div class="achievement-icon">🏆</div>
+                    <h3>Best Paper Award – COMP-SIF 2025</h3>
+                    <p class="achievement-detail">Predictive Analytics: A Machine Learning Approach for Food Production and Sales</p>
+                </div>
+                <div class="achievement-card card-3d" data-scroll>
+                    <div class="achievement-icon">📄</div>
+                    <h3>Research Publications</h3>
+                    <p class="achievement-detail">Multiple peer-reviewed papers across AI/ML, security, and systems</p>
+                </div>
+                <div class="achievement-card card-3d" data-scroll>
+                    <div class="achievement-icon">👔</div>
+                    <h3>Vice President – CSI Student Chapter</h3>
+                    <p class="achievement-detail">Led technical events, workshops, and student initiatives</p>
+                </div>
+                <div class="achievement-card card-3d" data-scroll>
+                    <div class="achievement-icon">🥇</div>
+                    <h3>IEEE Hackathon – Most Innovative Team</h3>
+                    <p class="achievement-detail">Recognized for building impactful, production-ready solutions</p>
+                </div>
+                <div class="achievement-card card-3d" data-scroll>
+                    <div class="achievement-icon">☁</div>
+                    <h3>DevOps & Cloud Internship</h3>
+                    <p class="achievement-detail">Hands-on experience with CI/CD, cloud infrastructure, and automation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATIONS SECTION
+         ============================================
+         Grid of professional certification cards:
+         - Oracle Cloud AI Foundations
+         - DevOps & CI/CD
+         - AWS Academy Cloud Foundations
+         - Git & GitHub
+         
+         Each card shows:
+         - Icon
+         - Certificate title
+         - Issuing organization
+         - Year obtained
+         - Optional certificate link
+         
+         Rendered as static HTML cards
+         ============================================ -->
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card card-3d" data-scroll>
+                    <h3>☁️ Oracle Cloud Infrastructure AI Foundations Associate</h3>
+                    <a href="CERT_LINK_OCI" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                </div>
+                <div class="cert-card card-3d" data-scroll>
+                    <h3>⚙️ DevOps &amp; CI/CD Certification</h3>
+                    <a href="CERT_LINK_DEVOPS" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                </div>
+                <div class="cert-card card-3d" data-scroll>
+                    <h3>🏫 AWS Academy Graduate – Cloud Foundations</h3>
+                    <a href="CERT_LINK_AWS" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                </div>
+                <div class="cert-card card-3d" data-scroll>
+                    <h3>📚 Introduction to Git &amp; GitHub</h3>
+                    <a href="CERT_LINK_GIT" target="_blank" class="btn btn-primary btn-accent">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================
+         Two-column layout:
+         LEFT: Contact information and social links
+         RIGHT: Contact form
+         
+         Features:
+         - Email, phone, location display
+         - Social media icon links
+         - Form with validation (name, email, message)
+         - Particles.js background effect
+         
+         Form handled by: ContactForm class in script.js
+         ============================================ -->
+    <!-- Contact Section (SIMPLIFIED) -->
+    <section id="contact" class="contact">
+        <div id="contact-particles"></div>
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-left">
+                    <h3 class="contact-lead">Get In Touch</h3>
+                    <p class="contact-copy">
+                        Interested in collaborating, hiring, or discussing technology?<br />
+                        Feel free to reach out — I'm always open to new opportunities and conversations.
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/AdityaElango" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://linkedin.com/in/aditya--elango" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:adityaelango2004@gmail.com">adityaelango2004@gmail.com</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:" class="phone-link">Phone</a>
+                        </div>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+                    <label class="sr-only" for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+                    <p class="error-message" data-error-for="name" aria-live="polite" hidden></p>
+
+                    <label class="sr-only" for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required />
+                    <p class="error-message" data-error-for="email" aria-live="polite" hidden></p>
+
+                    <label class="sr-only" for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+                    <p class="error-message" data-error-for="message" aria-live="polite" hidden></p>
+
+                    <button type="submit" class="btn btn-primary" id="contact-submit">Send Message</button>
+                    <div id="contact-success" class="success-message" hidden>
+                        <div class="success-content">
+                            <h4>Message sent!</h4>
+                            <p>Thanks for reaching out. I will get back to you soon.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER
+         ============================================
+         Simple footer with:
+         - Copyright notice
+         - Back to top button (managed by BackToTop class)
+         ============================================ -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditya Elango. All rights reserved.</p>
+            <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">
+                <span>↑</span>
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
