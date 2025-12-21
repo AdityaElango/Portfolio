@@ -1,0 +1,938 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Elango | AI/ML & Full-Stack Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Particles.js for animated backgrounds -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body class="bg-black text-white selection:bg-red-600 selection:text-white overflow-x-hidden">
+
+    <!-- Progress Bar -->
+    <div id="progress-container" class="fixed top-0 left-0 w-full h-1 z-[1001] bg-gray-900">
+        <div id="progress-bar" class="h-full bg-red-600 w-0 transition-all duration-75"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-black/90 backdrop-blur-sm border-b border-white/10 z-[1000] py-3 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-xl font-bold flex items-center gap-2">
+            <span class="text-red-600">📂</span> Portfolio
+        </div>
+        <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#career" class="nav-link">Career</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#contact" class="nav-link contact-link">Contact</a>
+        </div>
+        <!-- Mobile menu toggle -->
+        <button id="menu-toggle" class="lg:hidden text-2xl text-red-600">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black z-[1002] flex flex-col items-center justify-center gap-8 text-2xl font-bold translate-x-full transition-transform duration-300 lg:hidden">
+        <button id="menu-close" class="absolute top-6 right-6 text-red-600 text-3xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="hover:text-red-600 mobile-link">Home</a>
+        <a href="#about" class="hover:text-red-600 mobile-link">About</a>
+        <a href="#career" class="hover:text-red-600 mobile-link">Career</a>
+        <a href="#skills" class="hover:text-red-600 mobile-link">Skills</a>
+        <a href="#projects" class="hover:text-red-600 mobile-link">Projects</a>
+        <a href="#publications" class="hover:text-red-600 mobile-link">Publications</a>
+        <a href="#achievements" class="hover:text-red-600 mobile-link">Achievements</a>
+        <a href="#certifications" class="hover:text-red-600 mobile-link">Certifications</a>
+        <a href="#contact" class="hover:text-red-600 mobile-link">Contact</a>
+    </div>
+
+    <!-- 1️⃣ Hero Section -->
+    <section id="home" class="hero-section min-h-screen pt-32 pb-12 px-6 md:px-12 flex flex-col justify-center relative">
+        <!-- Particle background -->
+        <div id="particles-hero" class="absolute inset-0 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 items-center gap-12 relative z-10">
+            <div class="flex justify-center md:justify-start order-1 md:order-2">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 hero-photo">
+                    <img src="photos/Aditya.jpg" alt="Aditya Elango" class="w-full h-full object-cover rounded-3xl border-2 border-red-600 hero-photo-img">
+                    <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-white/20 rounded-3xl -z-10"></div>
+                </div>
+            </div>
+            <div class="space-y-6 order-2 md:order-1 text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white hero-name">Aditya <span class="text-red-600">Elango</span></h1>
+                <p class="hero-role text-lg md:text-xl text-red-500 font-semibold uppercase mx-auto md:mx-0">AI/ML Engineer <span class="hero-role-sep">•</span> Full-Stack Developer <span class="hero-role-sep">•</span> Cloud & DevOps Engineer</p>
+                <p class="text-lg text-gray-300 max-w-xl leading-relaxed hero-subtext mx-auto md:mx-0">
+                    Computer Science engineer specializing in AI/ML, full-stack development, and cloud-native systems. Focused on building scalable, production-ready applications with modern DevOps practices.
+                </p>
+                <div class="hero-ctas flex flex-col sm:flex-row sm:flex-wrap gap-3 pt-2">
+                    <a href="#projects" class="hero-cta hero-cta-primary px-8 py-3 bg-red-600 hover:bg-red-700 text-white rounded-full font-bold flex items-center justify-center gap-2 transition-all">
+                        <i class="fas fa-play text-xs"></i> View My Work
+                    </a>
+                    <a href="#contact" class="hero-cta hero-cta-secondary px-8 py-3 border border-red-600 text-red-600 hover:bg-red-600/10 rounded-full font-semibold flex items-center justify-center gap-2 transition-all">
+                        <i class="fas fa-phone-alt"></i> Contact Me
+                    </a>
+                    <a href="Aditya_Elango_Resume.pdf" target="_blank" rel="noreferrer" class="hero-cta hero-cta-tertiary px-7 py-2.5 bg-white text-black hover:bg-gray-200 rounded-full font-semibold flex items-center justify-center gap-2 transition-all text-sm">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <p class="hero-trust text-xs text-gray-400 flex items-center gap-2 justify-center md:justify-start">
+                    <span>6 Research Papers</span><span class="hero-trust-sep">•</span><span>Best Paper Award</span><span class="hero-trust-sep">•</span><span>DevOps Intern @ Hexaware</span>
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+            <span class="text-xs font-medium tracking-widest uppercase">Scroll to explore</span>
+            <div class="mouse-container">
+                <div class="mouse-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ About Me Section -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-white/5 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center md:text-left section-title">
+                <span class="section-title-accent"></span>
+                <span class="section-title-underline text-red-600">About</span> Me
+            </h2>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6 order-2 md:order-1">
+                    <p class="about-paragraph text-xl text-gray-300">
+                        <span class="about-paragraph-lead">Computer Science engineer with strong foundations in Artificial Intelligence, Machine Learning, Full-Stack Development, and Cloud & DevOps.</span> Experienced in building scalable systems, deploying containerized microservices, and applying machine learning to real-world problems. Passionate about data-driven decision-making, automation, and collaborative problem-solving.
+                    </p>
+                    <p class="about-emphasis text-sm text-gray-300">I enjoy building systems that are scalable, explainable, and impact-driven.</p>
+                    <div class="grid grid-cols-3 gap-8 pt-6 about-stats">
+                        <div class="text-center md:text-left about-stat">
+                            <h3 class="about-stat-number">8+</h3>
+                            <p class="about-stat-label">Projects Built</p>
+                        </div>
+                        <div class="text-center md:text-left about-stat">
+                            <h3 class="about-stat-number">5+</h3>
+                            <p class="about-stat-label">Research Papers</p>
+                        </div>
+                        <div class="text-center md:text-left about-stat">
+                            <h3 class="about-stat-number">4+</h3>
+                            <p class="about-stat-label">Industry Certifications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end order-1 md:order-2">
+                    <div class="about-photo w-64 h-96 relative md:w-72 md:h-[26rem]">
+                        <img src="photos/Aditya_Photo.jpg" alt="Portrait" class="w-full h-full object-cover rounded-[2rem] border-2 border-red-600 about-photo-img">
+                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-white/10 rounded-[2rem] -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ Education & Career -->
+    <section id="career" class="py-24 px-6 md:px-12 relative">
+        <!-- Particle background -->
+        <div id="particles-career" class="absolute inset-0 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Education -->
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-3xl font-bold mb-4 flex items-center gap-4">
+                        <span class="p-3 bg-red-600/10 text-red-600 rounded-lg"><i class="fas fa-graduation-cap"></i></span>
+                        Education
+                    </h2>
+                    <p class="section-summary mb-8 text-gray-400">Academic foundation in computer science with a focus on engineering fundamentals.</p>
+                    <div class="space-y-8 timeline-column pl-8 relative">
+                        <!-- Card 1 -->
+                        <details class="relative bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-red-600/50 transition-colors edu-card" aria-label="B.Tech in Computer Science & Engineering">
+                            <div class="absolute -left-[41px] top-6 w-5 h-5 bg-red-600 rounded-full border-4 border-black timeline-dot"></div>
+                            <summary class="edu-summary cursor-pointer flex items-start justify-between gap-3">
+                                <div>
+                                    <h3 class="text-xl font-bold">B.Tech in Computer Science & Engineering</h3>
+                                    <p class="text-red-500 mt-1 text-sm edu-institution">Amrita Vishwa Vidyapeetham, Bengaluru</p>
+                                </div>
+                                <span class="badge badge-grade" title="Cumulative Grade Point Average">CGPA: 7.55</span>
+                            </summary>
+                            <div class="edu-body mt-3 text-sm text-gray-400 space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <span>📅 Sept 2022 – June 2026</span>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- Card 2 -->
+                        <details class="relative bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-red-600/50 transition-colors edu-card" aria-label="Senior Secondary (CBSE – Class XII)">
+                            <div class="absolute -left-[41px] top-6 w-5 h-5 bg-red-600 rounded-full border-4 border-black timeline-dot"></div>
+                            <summary class="edu-summary cursor-pointer flex items-start justify-between gap-3">
+                                <div>
+                                    <h3 class="text-xl font-bold">Senior Secondary (CBSE – Class XII)</h3>
+                                    <p class="text-red-500 mt-1 text-sm edu-institution">Narayana E-Techno School, Bengaluru</p>
+                                </div>
+                                <span class="badge badge-grade">76%</span>
+                            </summary>
+                            <div class="edu-body mt-3 text-sm text-gray-400 space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <span>📅 2021 – 2022</span>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- Card 3 -->
+                        <details class="relative bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-red-600/50 transition-colors edu-card" aria-label="Secondary (CBSE – Class X)">
+                            <div class="absolute -left-[41px] top-6 w-5 h-5 bg-red-600 rounded-full border-4 border-black timeline-dot"></div>
+                            <summary class="edu-summary cursor-pointer flex items-start justify-between gap-3">
+                                <div>
+                                    <h3 class="text-xl font-bold">Secondary (CBSE – Class X)</h3>
+                                    <p class="text-red-500 mt-1 text-sm edu-institution">Narayana Olympiad, Bengaluru</p>
+                                </div>
+                                <span class="badge badge-grade">91.2%</span>
+                            </summary>
+                            <div class="edu-body mt-3 text-sm text-gray-400 space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <span>📅 2020 – 2021</span>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold mb-4 flex items-center gap-4">
+                        <span class="p-3 bg-red-600/10 text-red-600 rounded-lg"><i class="fas fa-briefcase"></i></span>
+                        Experience
+                    </h2>
+                    <p class="section-summary mb-8 text-gray-400">Hands-on industry experience building and deploying cloud-native systems.</p>
+                    <div class="space-y-8 timeline-column pl-8 relative">
+                        <!-- Card 1 -->
+                        <div class="relative bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-red-600/50 transition-colors exp-card">
+                            <div class="absolute -left-[41px] top-6 w-5 h-5 bg-red-600 rounded-full border-4 border-black timeline-dot"></div>
+                            <h3 class="text-xl font-bold">DevOps & Cloud Intern</h3>
+                            <p class="text-red-500 mt-1">Hexaware Technologies – Onsite (Chennai)</p>
+                            <p class="text-sm text-gray-400 mt-2">📅 May 2025 – July 2025</p>
+                            <div class="mt-3 text-sm text-gray-400 flex flex-wrap items-center gap-2 exp-tech">
+                                <span class="font-semibold text-white">Key Technologies:</span>
+                                <span class="tech-chip">Docker</span><span class="tech-chip">Kubernetes</span><span class="tech-chip">Terraform</span><span class="tech-chip">Jenkins</span><span class="tech-chip">Azure</span><span class="tech-chip">GitHub Actions</span>
+                            </div>
+                            <ul class="mt-4 space-y-2 text-gray-300 text-sm list-disc pl-4 leading-relaxed">
+                                <li>Delivered 25+ DevOps and SDLC implementations across Git workflows, CI/CD pipelines, Docker, Kubernetes, Terraform, Jenkins, and YAML.</li>
+                                <li>Completed 6+ weeks of Agile training; built and debugged automation scripts and pipelines to accelerate delivery.</li>
+                                <li class="exp-extra hidden">Managed and optimized Azure resources, creating 10+ reusable deployment and monitoring workflows to boost reliability.</li>
+                                <li class="exp-extra hidden">Applied enterprise-grade DevOps practices to ship scalable, containerized services with consistent observability.</li>
+                            </ul>
+                            <button class="exp-toggle text-xs mt-3 px-3 py-1.5 rounded-full border border-white/15 text-gray-300 hover:border-red-600 transition">View more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ Skills Section -->
+    <section id="skills" class="py-24 px-6 md:px-12 bg-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-center"><span class="text-red-600">Skills</span> & Expertise</h2>
+            <p class="skills-subtitle text-center text-gray-400 mb-12">Technologies and tools I’ve used to build real-world systems and research projects.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Group 1 -->
+                <div class="skill-card bg-black border border-white/10 p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4 text-red-600 flex items-center gap-3">
+                        <i class="fas fa-code skill-icon"></i> Programming & DB
+                    </h3>
+                    <div class="space-y-2 skill-rows">
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-primary"><i class="fab fa-python skill-pill-icon"></i> Python</span><span class="skill-tag skill-tier-primary"><i class="fab fa-js-square skill-pill-icon"></i> JavaScript</span><span class="skill-tag skill-tier-primary"><i class="fab fa-java skill-pill-icon"></i> Java</span><span class="skill-tag skill-tier-primary"><i class="fas fa-copyright skill-pill-icon"></i> C/C++</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-secondary"><i class="fas fa-database skill-pill-icon"></i> SQL</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-terminal skill-pill-icon"></i> Bash</span><span class="skill-tag skill-tier-secondary"><i class="fab fa-html5 skill-pill-icon"></i> HTML</span><span class="skill-tag skill-tier-secondary"><i class="fab fa-css3 skill-pill-icon"></i> CSS</span>
+                        </div>
+                        <div class="skill-row skill-extra">
+                            <span class="skill-tag skill-tier-tertiary"><i class="fas fa-leaf skill-pill-icon"></i> MongoDB</span><span class="skill-tag skill-tier-tertiary"><i class="fas fa-database skill-pill-icon"></i> MySQL</span><span class="skill-tag skill-tier-tertiary"><i class="fas fa-lambda skill-pill-icon"></i> Haskell</span>
+                        </div>
+                    </div>
+                    <button class="skill-toggle">Show more</button>
+                </div>
+
+                <!-- Group 2 -->
+                <div class="skill-card bg-black border border-white/10 p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4 text-red-600 flex items-center gap-3">
+                        <i class="fas fa-brain skill-icon"></i> AI / ML & Data
+                    </h3>
+                    <div class="space-y-2 skill-rows">
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-primary"><i class="fas fa-brain skill-pill-icon"></i> TensorFlow</span><span class="skill-tag skill-tier-primary"><i class="fas fa-fire skill-pill-icon"></i> PyTorch</span><span class="skill-tag skill-tier-primary"><i class="fas fa-chart-bar skill-pill-icon"></i> Scikit-learn</span><span class="skill-tag skill-tier-primary"><i class="fas fa-cube skill-pill-icon"></i> CNNs</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-secondary"><i class="fas fa-wave-square skill-pill-icon"></i> LSTM</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-tree skill-pill-icon"></i> XGBoost</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-forest skill-pill-icon"></i> Random Forest</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-microscope skill-pill-icon"></i> SHAP/LIME</span>
+                        </div>
+                        <div class="skill-row skill-extra">
+                            <span class="skill-tag skill-tier-tertiary"><i class="fas fa-face-smile skill-pill-icon"></i> Hugging Face</span><span class="skill-tag skill-tier-tertiary"><i class="fas fa-lightbulb skill-pill-icon"></i> LightGBM</span><span class="skill-tag skill-tier-tertiary"><i class="fas fa-robot skill-pill-icon"></i> Ollama</span><span class="skill-tag skill-tier-tertiary"><i class="fas fa-chart-pie skill-pill-icon"></i> Tableau</span><span class="skill-tag skill-tier-tertiary"><i class="fas fa-chart-line skill-pill-icon"></i> Power BI</span>
+                        </div>
+                    </div>
+                    <button class="skill-toggle">Show more</button>
+                </div>
+
+                <!-- Group 3 -->
+                <div class="skill-card bg-black border border-white/10 p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4 text-red-600 flex items-center gap-3">
+                        <i class="fas fa-laptop-code skill-icon"></i> Web & Backend
+                    </h3>
+                    <div class="space-y-2 skill-rows">
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-primary"><i class="fab fa-react skill-pill-icon"></i> React.js</span><span class="skill-tag skill-tier-primary"><i class="fas fa-arrow-right skill-pill-icon"></i> Next.js</span><span class="skill-tag skill-tier-primary"><i class="fab fa-node-js skill-pill-icon"></i> Node.js</span><span class="skill-tag skill-tier-primary"><i class="fas fa-cube skill-pill-icon"></i> Express.js</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-secondary"><i class="fas fa-flask skill-pill-icon"></i> Flask</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-leaf skill-pill-icon"></i> Spring Boot</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-arrows-alt skill-pill-icon"></i> REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 4 -->
+                <div class="skill-card bg-black border border-white/10 p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4 text-red-600 flex items-center gap-3">
+                        <i class="fas fa-cloud skill-icon"></i> Cloud & DevOps
+                    </h3>
+                    <div class="space-y-2 skill-rows">
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-primary"><i class="fab fa-aws skill-pill-icon"></i> AWS</span><span class="skill-tag skill-tier-primary"><i class="fas fa-cloud skill-pill-icon"></i> Azure</span><span class="skill-tag skill-tier-primary"><i class="fab fa-docker skill-pill-icon"></i> Docker</span><span class="skill-tag skill-tier-primary"><i class="fas fa-dharmachakra skill-pill-icon"></i> Kubernetes</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-secondary"><i class="fas fa-hammer skill-pill-icon"></i> Terraform</span><span class="skill-tag skill-tier-secondary"><i class="fab fa-github skill-pill-icon"></i> GitHub Actions</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-pipe skill-pill-icon"></i> Jenkins</span>
+                        </div>
+                        <div class="skill-row skill-extra">
+                            <span class="skill-tag skill-tier-tertiary"><i class="fas fa-users skill-pill-icon"></i> Agile/Scrum</span><span class="skill-tag skill-tier-tertiary"><i class="fas fa-circle-notch skill-pill-icon"></i> SDLC</span>
+                        </div>
+                    </div>
+                    <button class="skill-toggle">Show more</button>
+                </div>
+
+                <!-- Group 5 -->
+                <div class="skill-card bg-black border border-white/10 p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4 text-red-600 flex items-center gap-3">
+                        <i class="fas fa-tools skill-icon"></i> Tools & Platforms
+                    </h3>
+                    <div class="space-y-2 skill-rows">
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-primary"><i class="fab fa-git-alt skill-pill-icon"></i> Git</span><span class="skill-tag skill-tier-primary"><i class="fab fa-github skill-pill-icon"></i> GitHub</span><span class="skill-tag skill-tier-primary"><i class="fas fa-rocket skill-pill-icon"></i> Vercel</span><span class="skill-tag skill-tier-primary"><i class="fas fa-server skill-pill-icon"></i> Render</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-tag skill-tier-secondary"><i class="fas fa-play-circle skill-pill-icon"></i> Streamlit</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-sliders-h skill-pill-icon"></i> Gradio</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-fire skill-pill-icon"></i> Firebase</span><span class="skill-tag skill-tier-secondary"><i class="fas fa-pen-fancy skill-pill-icon"></i> Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 6 -->
+                <div class="skill-card skill-card-soft bg-black/80 border border-white/10 p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4 text-red-500 flex items-center gap-3">
+                        <i class="fas fa-users skill-icon-soft"></i> Soft Skills
+                    </h3>
+                    <div class="space-y-2 skill-rows">
+                        <div class="skill-row">
+                            <span class="skill-tag soft">Analytical Thinking</span><span class="skill-tag soft">Problem Solving</span><span class="skill-tag soft">Leadership</span>
+                        </div>
+                        <div class="skill-row">
+                            <span class="skill-tag soft">Team Collaboration</span><span class="skill-tag soft">Adaptability</span><span class="skill-tag soft">Event Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ Projects Section -->
+    <section id="projects" class="py-24 px-6 md:px-12 relative">
+        <!-- Particle background -->
+        <div id="particles-projects" class="absolute inset-0 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center">🔥 <span class="text-red-600">Featured</span> Projects</h2>
+            
+            <!-- Featured Projects (3) -->
+            <div class="featured-panel mb-24 featured-showcase">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Smart Assistive Learning -->
+                    <div class="project-card featured-card group">
+                        <div class="featured-card-inner h-full flex flex-col">
+                            <span class="text-red-500 text-xs font-bold uppercase tracking-widest">AI / ML · Full-Stack · Assistive</span>
+                            <h3 class="featured-title text-2xl font-bold mt-3">Smart Assistive Learning Platform</h3>
+                            <p class="featured-desc text-gray-300 text-sm mt-3 flex-grow">AI platform detecting dyslexia/dysgraphia from handwriting and speech patterns.
+Built for early detection with longitudinal progress tracking.</p>
+                            <p class="featured-metric text-xs text-red-300/80 mt-4 font-medium"><span class="text-red-500 font-semibold">Impact:</span> Tracks 5+ learning metrics per student.</p>
+                            <div class="featured-actions flex items-center gap-3 mt-8">
+                                <a href="#" class="btn-ghost" aria-label="View on GitHub"><i class="fab fa-github"></i><span class="btn-label">GitHub</span></a>
+                                <button onclick="openModal('project-dyslexia')" class="btn-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Insightify -->
+                    <div class="project-card featured-card group">
+                        <div class="featured-card-inner h-full flex flex-col">
+                            <span class="text-red-500 text-xs font-bold uppercase tracking-widest">NLP · AI / ML · Full-Stack</span>
+                            <h3 class="featured-title text-2xl font-bold mt-3">Insightify – Document Analyzer</h3>
+                            <p class="featured-desc text-gray-300 text-sm mt-3 flex-grow">NLP platform for extracting and analyzing legal/financial documents.
+Designed for scalable, production-ready document intelligence.</p>
+                            <p class="featured-metric text-xs text-red-300/80 mt-4 font-medium"><span class="text-red-500 font-semibold">Impact:</span> Extracts 10+ attributes per document.</p>
+                            <div class="featured-actions flex items-center gap-3 mt-8">
+                                <a href="#" class="btn-ghost" aria-label="View on GitHub"><i class="fab fa-github"></i><span class="btn-label">GitHub</span></a>
+                                <button onclick="openModal('project-insightify')" class="btn-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Budget Buddy -->
+                    <div class="project-card featured-card group">
+                        <div class="featured-card-inner h-full flex flex-col">
+                            <span class="text-red-500 text-xs font-bold uppercase tracking-widest">Full-Stack · Web · Cloud</span>
+                            <h3 class="featured-title text-2xl font-bold mt-3">Budget Buddy – Expense Tracker</h3>
+                            <p class="featured-desc text-gray-300 text-sm mt-3 flex-grow">Full-stack expense tracker with real-time budgeting and analytics.
+Built for reliable personal finance management and insights.</p>
+                            <p class="featured-metric text-xs text-red-300/80 mt-4 font-medium"><span class="text-red-500 font-semibold">Impact:</span> Analyzes 100+ transactions per user.</p>
+                            <div class="featured-actions flex items-center gap-3 mt-8">
+                                <a href="#" class="btn-ghost" aria-label="View on GitHub"><i class="fab fa-github"></i><span class="btn-label">GitHub</span></a>
+                                <button onclick="openModal('project-budget')" class="btn-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Projects Filter Gallery -->
+            <div class="mt-32 pt-16 border-t border-white/10 relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 bg-black">
+                    <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">More Projects</span>
+                </div>
+                <h2 class="text-3xl font-bold mb-8 text-center"><i class="fas fa-folder-open text-red-600"></i> Additional Work</h2>
+                
+                <!-- Filters -->
+                <div class="flex items-center justify-between mb-4 gap-4 md:justify-center md:mb-12">
+                    <button id="filter-toggle" class="filter-toggle md:hidden">Filters</button>
+                    <div id="project-filters" class="flex flex-wrap justify-center gap-3 md:gap-4">
+                        <button class="filter-btn active" data-filter="all">All (7)</button>
+                        <button class="filter-btn" data-filter="AI / ML">AI / ML (3)</button>
+                        <button class="filter-btn" data-filter="Full-Stack">Full-Stack (2)</button>
+                        <button class="filter-btn" data-filter="Security">Security (2)</button>
+                        <button class="filter-btn" data-filter="Big Data">Big Data (2)</button>
+                        <button class="filter-btn" data-filter="Systems">Systems (1)</button>
+                    </div>
+                </div>
+
+                <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Project 1: Spark Clustering -->
+                    <div class="project-card more-project-card p-6 flex flex-col" data-categories='["Big Data"]'>
+                        <span class="domain-label text-red-400 text-[0.65rem] font-semibold uppercase tracking-wider">NLP · BIG DATA</span>
+                        <h4 class="project-title text-lg font-extrabold mt-2 mb-3 leading-snug">News Clustering & Topic Modeling</h4>
+                        <p class="project-desc text-gray-400 text-xs flex-grow leading-relaxed opacity-75">Scalable Spark-based pipeline for clustering thousands of news articles using topic modeling techniques.</p>
+                        <p class="project-metric text-[0.65rem] text-red-300 font-semibold mt-3 mb-4 flex items-center gap-1.5">
+                            <i class="fas fa-chart-simple"></i> Clustered 10k+ articles
+                        </p>
+                        <div class="project-actions flex gap-3 mt-auto">
+                            <a href="#" class="github-btn text-center py-1.5 px-3 bg-white/10 text-white rounded text-xs font-bold hover:bg-white/20 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <button onclick="openModal('project-spark')" class="details-btn flex-1 py-2 bg-red-600 text-white rounded text-xs font-bold hover:bg-red-700 transition-all">Details</button>
+                        </div>
+                    </div>
+                    <!-- Project 2: Exam System -->
+                    <div class="project-card more-project-card p-6 flex flex-col" data-categories='["Security", "Full-Stack"]'>
+                        <span class="domain-label text-red-400 text-[0.60rem] font-semibold uppercase tracking-wider">SECURITY · CRYPTO</span>
+                        <h4 class="project-title text-lg font-extrabold mt-2 mb-3 leading-snug">Secure Exam Attendance System</h4>
+                        <p class="project-desc text-gray-400 text-xs flex-grow leading-relaxed opacity-75">Multi-factor attendance system combining NFC and encrypted QR codes for secure student verification.</p>
+                        <p class="project-metric text-[0.65rem] text-red-300 font-semibold mt-3 mb-4 flex items-center gap-1.5">
+                            <i class="fas fa-clock"></i> Sub-5s verification time
+                        </p>
+                        <div class="project-actions flex gap-3 mt-auto">
+                            <a href="#" class="github-btn text-center py-1.5 px-3 bg-white/10 text-white rounded text-xs font-bold hover:bg-white/20 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <button onclick="openModal('project-exam')" class="details-btn flex-1 py-2 bg-red-600 text-white rounded text-xs font-bold hover:bg-red-700 transition-all">Details</button>
+                        </div>
+                    </div>
+                    <!-- Project 3: MedSync -->
+                    <div class="project-card more-project-card p-6 flex flex-col" data-categories='["Security", "Full-Stack"]'>
+                        <span class="domain-label text-red-400 text-[0.60rem] font-semibold uppercase tracking-wider">BLOCKCHAIN · HEALTHCARE</span>
+                        <h4 class="project-title text-lg font-extrabold mt-2 mb-3 leading-snug">MedSync – Secure Patient Records</h4>
+                        <p class="project-desc text-gray-400 text-xs flex-grow leading-relaxed opacity-75">Decentralized healthcare platform for secure and tamper-proof patient record management.</p>
+                        <p class="project-metric text-[0.65rem] text-red-300 font-semibold mt-3 mb-4 flex items-center gap-1.5">
+                            <i class="fas fa-rocket"></i> 40% faster record retrieval
+                        </p>
+                        <div class="project-actions flex gap-3 mt-auto">
+                            <a href="#" class="github-btn text-center py-1.5 px-3 bg-white/10 text-white rounded text-xs font-bold hover:bg-white/20 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <button onclick="openModal('project-medsync')" class="details-btn flex-1 py-2 bg-red-600 text-white rounded text-xs font-bold hover:bg-red-700 transition-all">Details</button>
+                        </div>
+                    </div>
+                    <!-- Project 4: Ride-Hailing -->
+                    <div class="project-card more-project-card p-6 flex flex-col" data-categories='["AI / ML", "Big Data"]'>
+                        <span class="domain-label text-red-400 text-[0.60rem] font-semibold uppercase tracking-wider">AI / ML · BIG DATA</span>
+                        <h4 class="project-title text-lg font-extrabold mt-2 mb-3 leading-snug">Ride-Hailing Demand Forecasting</h4>
+                        <p class="project-desc text-gray-400 text-xs flex-grow leading-relaxed opacity-75">Demand forecasting system for ride-hailing platforms with driver reallocation strategies.</p>
+                        <p class="project-metric text-[0.65rem] text-red-300 font-semibold mt-3 mb-4 flex items-center gap-1.5">
+                            <i class="fas fa-bullseye"></i> RMSE ≈ 2.7
+                        </p>
+                        <div class="project-actions flex gap-3 mt-auto">
+                            <a href="#" class="github-btn text-center py-1.5 px-3 bg-white/10 text-white rounded text-xs font-bold hover:bg-white/20 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <button onclick="openModal('project-ride')" class="details-btn flex-1 py-2 bg-red-600 text-white rounded text-xs font-bold hover:bg-red-700 transition-all">Details</button>
+                        </div>
+                    </div>
+                    <!-- Project 5: Credit Risk -->
+                    <div class="project-card more-project-card p-6 flex flex-col" data-categories='["AI / ML"]'>
+                        <span class="domain-label text-red-400 text-[0.60rem] font-semibold uppercase tracking-wider">AI / ML · FINANCE</span>
+                        <h4 class="project-title text-lg font-extrabold mt-2 mb-3 leading-snug">Interpretable Credit Risk Prediction</h4>
+                        <p class="project-desc text-gray-400 text-xs flex-grow leading-relaxed opacity-75">Interpretable credit risk prediction system using statistical and Bayesian models.</p>
+                        <p class="project-metric text-[0.65rem] text-red-300 font-semibold mt-3 mb-4 flex items-center gap-1.5">
+                            <i class="fas fa-database"></i> Analyzed 338k+ borrower records
+                        </p>
+                        <div class="project-actions flex gap-3 mt-auto">
+                            <a href="#" class="github-btn text-center py-1.5 px-3 bg-white/10 text-white rounded text-xs font-bold hover:bg-white/20 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <button onclick="openModal('project-credit')" class="details-btn flex-1 py-2 bg-red-600 text-white rounded text-xs font-bold hover:bg-red-700 transition-all">Details</button>
+                        </div>
+                    </div>
+                    <!-- Project 6: NPC Behavior -->
+                    <div class="project-card more-project-card p-6 flex flex-col" data-categories='["AI / ML"]'>
+                        <span class="domain-label text-red-400 text-[0.60rem] font-semibold uppercase tracking-wider">GAME AI · ALGORITHMS</span>
+                        <h4 class="project-title text-lg font-extrabold mt-2 mb-3 leading-snug">NPC Behavior Modeling</h4>
+                        <p class="project-desc text-gray-400 text-xs flex-grow leading-relaxed opacity-75">Finite Automata-based framework for adaptive NPC behavior modeling in video games.</p>
+                        <p class="project-metric text-[0.65rem] text-red-300 font-semibold mt-3 mb-4 flex items-center gap-1.5">
+                            <i class="fas fa-gamepad"></i> Multiple NPC roles modeled
+                        </p>
+                        <div class="project-actions flex gap-3 mt-auto">
+                            <a href="#" class="github-btn text-center py-1.5 px-3 bg-white/10 text-white rounded text-xs font-bold hover:bg-white/20 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <button onclick="openModal('project-npc')" class="details-btn flex-1 py-2 bg-red-600 text-white rounded text-xs font-bold hover:bg-red-700 transition-all">Details</button>
+                        </div>
+                    </div>
+                    <!-- Project 7: ConfigMaster -->
+                    <div class="project-card more-project-card p-6 flex flex-col" data-categories='["Systems"]'>
+                        <span class="domain-label text-red-400 text-[0.65rem] font-semibold uppercase tracking-wider">SYSTEMS · AUTOMATION</span>
+                        <h4 class="project-title text-lg font-extrabold mt-2 mb-3 leading-snug">ConfigMaster – Interactive Config Tool</h4>
+                        <p class="project-desc text-gray-400 text-xs flex-grow leading-relaxed opacity-75">Bash-based interactive system configuration tool for Unix environments.</p>
+                        <p class="project-metric text-[0.65rem] text-red-300 font-semibold mt-3 mb-4 flex items-center gap-1.5">
+                            <i class="fas fa-terminal"></i> Automates network & software config
+                        </p>
+                        <div class="project-actions flex gap-3 mt-auto">
+                            <a href="#" class="github-btn text-center py-1.5 px-3 bg-white/10 text-white rounded text-xs font-bold hover:bg-white/20 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <button onclick="openModal('project-config')" class="details-btn flex-1 py-2 bg-red-600 text-white rounded text-xs font-bold hover:bg-red-700 transition-all">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals Container -->
+    <div id="modal-container" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[2000] hidden items-center justify-center p-6">
+        <div class="bg-black border border-white/20 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 md:p-12 relative">
+            <button id="modal-close" class="absolute top-6 right-6 text-red-600 text-2xl hover:scale-110 transition-transform">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 6️⃣ Publications Section -->
+    <section id="publications" class="py-24 px-6 md:px-12 bg-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-center"><span class="text-red-600">Publications</span> & Research</h2>
+            <p class="text-center text-gray-400 text-sm mb-16 max-w-2xl mx-auto">Peer-reviewed research and conference publications focused on AI/ML, systems, security, and applied computing.</p>
+            <div class="space-y-12 relative before:content-[''] before:absolute before:left-[11px] before:top-4 before:bottom-0 before:w-[1px] before:bg-red-600/20">
+                <!-- Pub 1: BEST PAPER - March 2025 -->
+                <div class="pl-12 relative group publication-item">
+                    <div class="absolute left-0 top-2 w-5 h-5 bg-red-600 border-2 border-red-600 rounded-full z-10 shadow-lg shadow-red-600/40"></div>
+                    <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-red-600 transition-all publication-card">
+                        <span class="text-xs text-red-400 font-semibold uppercase tracking-wider">📅 March 2025</span>
+                        <h3 class="pub-title text-2xl font-extrabold mt-3 mb-2 leading-tight">Predictive Analytics: A Machine Learning Approach for Insights in Food Production and Sales</h3>
+                        <div class="mb-3">
+                            <span class="award-badge inline-flex items-center gap-1.5 bg-yellow-500/15 text-yellow-400 px-3 py-1.5 rounded-full text-xs font-bold border border-yellow-500/30">
+                                🏆 Best Paper Award
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">AI / ML</span>
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Sustainable Computing</span>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3 opacity-75">📍 COMP-SIF-2025, BMS Institute of Technology & Management (BMSIT&M), Bengaluru</p>
+                        <p class="text-gray-300 text-sm leading-relaxed pub-description">Built predictive analytics for food demand forecasting using LSTM and XGBoost. Integrated contextual factors like holidays and schedules for accuracy. Achieved improved forecasting with explainable AI techniques.</p>
+                        <div class="flex gap-3 mt-6">
+                            <button class="pub-btn-secondary text-xs px-5 py-2 border border-white/20 rounded-lg hover:bg-white/10 hover:border-red-600/40 transition-all font-semibold">View Certificate</button>
+                            <button class="pub-btn-primary text-xs px-5 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-all font-bold shadow-md shadow-red-600/20">View Paper</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pub 2: FlexAssist - May 2025 -->
+                <div class="pl-12 relative group publication-item">
+                    <div class="absolute left-0 top-2 w-5 h-5 bg-black border-2 border-red-600 rounded-full z-10 group-hover:bg-red-600 transition-colors"></div>
+                    <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-red-600 transition-all publication-card">
+                        <span class="text-xs text-red-400 font-semibold uppercase tracking-wider">📅 May 2025</span>
+                        <h3 class="pub-title text-2xl font-extrabold mt-3 mb-4 leading-snug">FlexAssist: Sensor-Based Glove for Hand Function Assessment</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Healthcare</span>
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">IoT</span>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3 opacity-75">📍 STCR 2025, Bannari Amman Institute of Technology (BIT), Sathyamangalam</p>
+                        <p class="text-gray-300 text-sm leading-relaxed pub-description">Built smart glove using flex sensors for real-time motor function assessment. Streamed data into ML models for movement analysis and recovery tracking. Integrated hardware with Python backend and interactive dashboard.</p>
+                        <div class="flex gap-3 mt-6">
+                            <button class="pub-btn-secondary text-xs px-5 py-2 border border-white/20 rounded-lg hover:bg-white/10 hover:border-red-600/40 transition-all font-semibold">View Certificate</button>
+                            <button class="pub-btn-primary text-xs px-5 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-all font-bold shadow-md shadow-red-600/20">View Paper</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pub 3: Game AI - April 2024 -->
+                <div class="pl-12 relative group publication-item">
+                    <div class="absolute left-0 top-2 w-5 h-5 bg-black border-2 border-red-600 rounded-full z-10 group-hover:bg-red-600 transition-colors"></div>
+                    <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-red-600 transition-all publication-card">
+                        <span class="text-xs text-red-400 font-semibold uppercase tracking-wider">📅 April 2024</span>
+                        <h3 class="pub-title text-2xl font-extrabold mt-3 mb-4 leading-snug">Finite Automata for NPC Behavior Modeling in Video Games</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Game AI</span>
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Algorithms</span>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3 opacity-75">📍 GCAT 2024, Nagarjuna College of Engineering and Technology (NCET), Bengaluru</p>
+                        <p class="text-gray-300 text-sm leading-relaxed pub-description">Proposed Finite Automata framework for adaptive NPC behaviors in games. Designed state transition algorithms enabling dynamic responses to player actions. Modeled multiple NPC roles with diverse behavioral patterns.</p>
+                        <div class="flex gap-3 mt-6">
+                            <button class="pub-btn-secondary text-xs px-5 py-2 border border-white/20 rounded-lg hover:bg-white/10 hover:border-red-600/40 transition-all font-semibold">View Certificate</button>
+                            <button class="pub-btn-primary text-xs px-5 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-all font-bold shadow-md shadow-red-600/20">View Paper</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pub 4: Security - November 2025 -->
+                <div class="pl-12 relative group publication-item">
+                    <div class="absolute left-0 top-2 w-5 h-5 bg-black border-2 border-red-600 rounded-full z-10 group-hover:bg-red-600 transition-colors"></div>
+                    <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-red-600 transition-all publication-card">
+                        <span class="text-xs text-red-400 font-semibold uppercase tracking-wider">📅 November 2025</span>
+                        <h3 class="pub-title text-2xl font-extrabold mt-3 mb-4 leading-snug">Secure Exam Attendance System Using NFC and Encrypted QR Codes</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Security</span>
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Cryptography</span>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3 opacity-75">📍 ICECA 2025, IEEE Conference</p>
+                        <p class="text-gray-300 text-sm leading-relaxed pub-description">Multi-factor system combining NFC and AES-256 encrypted QR codes for tamper-proof attendance. Implemented Kerberos-based access control with distributed storage. Achieved sub-5 second verification at scale.</p>
+                        <div class="flex gap-3 mt-6">
+                            <button class="pub-btn-secondary text-xs px-5 py-2 border border-white/20 rounded-lg hover:bg-white/10 hover:border-red-600/40 transition-all font-semibold">View Certificate</button>
+                            <button class="pub-btn-primary text-xs px-5 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-all font-bold shadow-md shadow-red-600/20">View Paper</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pub 5: Blockchain - November 2025 -->
+                <div class="pl-12 relative group publication-item">
+                    <div class="absolute left-0 top-2 w-5 h-5 bg-black border-2 border-red-600 rounded-full z-10 group-hover:bg-red-600 transition-colors"></div>
+                    <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-red-600 transition-all publication-card">
+                        <span class="text-xs text-red-400 font-semibold uppercase tracking-wider">📅 November 2025</span>
+                        <h3 class="pub-title text-2xl font-extrabold mt-3 mb-4 leading-snug">MedSync: Secure Distributed Patient Records and Lab Sample Tracking</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Blockchain</span>
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Distributed Systems</span>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3 opacity-75">📍 ICEAMST 2025</p>
+                        <p class="text-gray-300 text-sm leading-relaxed pub-description">Blockchain-based platform with access control for secure patient records. Integrated IPFS for decentralized storage of sensitive data. Improved record traceability and retrieval efficiency while ensuring privacy.</p>
+                        <div class="flex gap-3 mt-6">
+                            <button class="pub-btn-secondary text-xs px-5 py-2 border border-white/20 rounded-lg hover:bg-white/10 hover:border-red-600/40 transition-all font-semibold">View Certificate</button>
+                            <button class="pub-btn-primary text-xs px-5 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-all font-bold shadow-md shadow-red-600/20">View Paper</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pub 6: Systems - August 2025 -->
+                <div class="pl-12 relative group publication-item">
+                    <div class="absolute left-0 top-2 w-5 h-5 bg-black border-2 border-red-600 rounded-full z-10 group-hover:bg-red-600 transition-colors"></div>
+                    <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-red-600 transition-all publication-card">
+                        <span class="text-xs text-red-400 font-semibold uppercase tracking-wider">📅 August 2025</span>
+                        <h3 class="pub-title text-2xl font-extrabold mt-3 mb-4 leading-snug">ConfigMaster: Interactive Configuration System for Unix</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Systems</span>
+                            <span class="research-tag text-[0.65rem] font-semibold uppercase tracking-wider text-red-300 bg-red-600/10 px-2.5 py-1 rounded-full border border-red-600/20">Automation</span>
+                        </div>
+                        <p class="text-gray-400 text-xs mb-3 opacity-75">📍 CSITSS-2025, RV College of Engineering, Bengaluru</p>
+                        <p class="text-gray-300 text-sm leading-relaxed pub-description\">Built interactive Bash-based configuration tool for Unix systems. Designed menu-driven interface automating system administration tasks. Simplified network, software, and system operations management.</p>
+                        <div class="flex gap-4 mt-6">
+                            <button class="pub-btn-primary flex-1 text-xs px-5 py-2.5 bg-red-600 rounded-lg hover:bg-red-700 transition-all font-bold shadow-md shadow-red-600/20">View Paper</button>
+                            <button class="pub-btn-secondary text-xs px-5 py-2.5 border border-white/20 rounded-lg hover:bg-white/10 hover:border-red-600/40 transition-all font-semibold">Certificate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7️⃣ Certifications Section -->
+    <section id="certifications" class="py-24 px-6 md:px-12 relative">
+        <!-- Particle background -->
+        <div id="particles-certifications" class="absolute inset-0 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-4xl font-bold mb-4 text-center">📜 <span class="text-red-600">Certifications</span></h2>
+            <p class="text-center text-gray-400 text-sm mb-16 max-w-2xl mx-auto">Industry-recognized certifications validating cloud, DevOps, and AI foundations.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cert 1: Primary -->
+                <div class="cert-card primary-cert bg-white/5 border border-white/10 p-6 rounded-2xl text-center hover:border-red-600 transition-all duration-300 group">
+                    <div class="flex justify-center mb-4">
+                        <span class="cert-badge text-xs font-bold uppercase tracking-widest text-red-400 bg-red-600/10 px-3 py-1 rounded-full border border-red-600/20">Core</span>
+                    </div>
+                    <div class="w-16 h-16 bg-red-600/10 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:scale-110 transition-transform cert-icon">
+                        <i class="fas fa-cloud-bolt"></i>
+                    </div>
+                    <h3 class="text-sm font-bold mb-2 leading-tight">OCI AI Foundations Associate</h3>
+                    <p class="text-xs text-gray-500 opacity-70 mb-5 whitespace-nowrap">Oracle · Aug 2025</p>
+                    <button class="cert-cta text-xs w-full py-2.5 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-all font-semibold">View Certificate</button>
+                </div>
+                <!-- Cert 2 -->
+                <div class="cert-card bg-white/5 border border-white/10 p-6 rounded-2xl text-center hover:border-red-600 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-red-600/10 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:scale-110 transition-transform cert-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 class="text-sm font-bold mb-2 leading-tight">DevOps & CI/CD Fundamentals</h3>
+                    <p class="text-xs text-gray-500 opacity-70 mb-5 whitespace-nowrap">Hexaware · Mar 2025</p>
+                    <button class="cert-cta text-xs w-full py-2.5 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-all font-semibold">View Certificate</button>
+                </div>
+                <!-- Cert 3 -->
+                <div class="cert-card bg-white/5 border border-white/10 p-6 rounded-2xl text-center hover:border-red-600 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-red-600/10 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:scale-110 transition-transform cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3 class="text-sm font-bold mb-2 leading-tight">AWS Cloud Foundations</h3>
+                    <p class="text-xs text-gray-500 opacity-70 mb-5 whitespace-nowrap">AWS Academy · Nov 2024</p>
+                    <button class="cert-cta text-xs w-full py-2.5 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-all font-semibold">View Certificate</button>
+                </div>
+                <!-- Cert 4 -->
+                <div class="cert-card bg-white/5 border border-white/10 p-6 rounded-2xl text-center hover:border-red-600 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-red-600/10 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:scale-110 transition-transform cert-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 class="text-sm font-bold mb-2 leading-tight">Git & GitHub Fundamentals</h3>
+                    <p class="text-xs text-gray-500 opacity-70 mb-5 whitespace-nowrap">GitHub · Sep 2024</p>
+                    <button class="cert-cta text-xs w-full py-2.5 border border-red-600 text-red-600 rounded-lg hover:bg-red-600 hover:text-white transition-all font-semibold">View Certificate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8️⃣ Achievements & Extra-Curricular -->
+    <section id="achievements" class="py-24 px-6 md:px-12 bg-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-center"><span class="text-red-600">Achievements</span> & Extras</h2>
+            <p class="text-center text-gray-400 text-sm mb-16 max-w-2xl mx-auto">Leadership roles, recognitions, volunteering, and extracurricular impact beyond academics.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Achievement 1: Hackathon (HIGHLIGHT) -->
+                <div class="achievement-card highlight-achievement bg-black p-8 rounded-3xl border border-white/10 hover:border-red-600 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="achievement-icon bg-red-600/20 text-red-500 p-3 rounded-xl"><i class="fas fa-trophy"></i></div>
+                        <span class="achievement-date text-xs text-gray-500">May 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <h3 class="text-lg font-bold">Most Innovative Team</h3>
+                        <span class="achievement-badge text-xs bg-red-600/20 text-red-400 px-2 py-1 rounded">🏆 Award</span>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-3">Tech Triumph Hackathon</p>
+                    <p class="mt-3 text-xs text-gray-400">Developed a surplus food redistribution platform connecting restaurants with NGOs.</p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded">React.js</span>
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded">MongoDB</span>
+                    </div>
+                </div>
+                <!-- Achievement 2: Vice President -->
+                <div class="achievement-card bg-black p-8 rounded-3xl border border-white/10 hover:border-red-600 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="achievement-icon bg-red-600/20 text-red-500 p-3 rounded-xl"><i class="fas fa-users-gear"></i></div>
+                        <span class="achievement-date text-xs text-gray-500">Aug 2024 – Aug 2025</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Vice President</h3>
+                    <p class="text-xs text-gray-500 mb-3">Computer Society of India (CSI ASEB)</p>
+                    <ul class="mt-3 space-y-2 text-xs text-gray-400 list-disc pl-4 leading-relaxed achievement-bullets">
+                        <li>Led 5+ technical events, workshops, and coding challenges.</li>
+                        <li>Organized Blockchain workshop and led multi-round technical quiz at Aarohan Science Fest.</li>
+                    </ul>
+                </div>
+                <!-- Achievement 3: IEEE Senior Executive -->
+                <div class="achievement-card bg-black p-8 rounded-3xl border border-white/10 hover:border-red-600 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="achievement-icon bg-red-600/20 text-red-500 p-3 rounded-xl"><i class="fas fa-handshake"></i></div>
+                        <span class="achievement-date text-xs text-gray-500">Aug 2023 – Aug 2024</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Senior Executive</h3>
+                    <p class="text-xs text-gray-500 mb-3">IEEE Student Branch</p>
+                    <p class="mt-3 text-xs text-gray-400">Drafted event reports and supported planning of cross-chapter IEEE technical events.</p>
+                </div>
+                <!-- Achievement 4: Volunteer NGO -->
+                <div class="achievement-card bg-black p-8 rounded-3xl border border-white/10 hover:border-red-600 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="achievement-icon bg-red-600/20 text-red-500 p-3 rounded-xl"><i class="fas fa-heart"></i></div>
+                        <span class="achievement-date text-xs text-gray-500">Jan 2025</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Volunteer</h3>
+                    <p class="text-xs text-gray-500 mb-3">Shiksha NGO</p>
+                    <p class="mt-3 text-xs text-gray-400">Mentored 50+ students with creative teaching integrating sports, music, and art at Krishnappa School.</p>
+                </div>
+                <!-- Achievement 5: Squad Club -->
+                <div class="achievement-card bg-black p-8 rounded-3xl border border-white/10 hover:border-red-600 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="achievement-icon bg-red-600/20 text-red-500 p-3 rounded-xl"><i class="fas fa-mountain"></i></div>
+                        <span class="achievement-date text-xs text-gray-500">Aug 2023 – Aug 2024</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Senior Executive</h3>
+                    <p class="text-xs text-gray-500 mb-3">Squad Club</p>
+                    <p class="mt-3 text-xs text-gray-400">Led hiking expeditions and outdoor activities, promoting teamwork and resilience.</p>
+                </div>
+                <!-- Achievement 6: Workshops (Reduced Visual Weight) -->
+                <div class="achievement-card workshop-card bg-black/70 p-8 rounded-3xl border border-white/5 hover:border-white/20 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="achievement-icon bg-white/5 text-gray-500 p-3 rounded-xl text-lg"><i class="fas fa-lightbulb"></i></div>
+                        <span class="achievement-date text-xs text-gray-700">2023 – 2024</span>
+                    </div>
+                    <h3 class="text-sm font-bold text-gray-200">Workshops Attended</h3>
+                    <p class="mt-3 text-xs text-gray-500 leading-relaxed">• Generative AI Workshop (Anokha Fest)<br>• Sepia Photography Workshop (Vidyut Fest)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9️⃣ Contact Section -->
+    <section id="contact" class="py-24 px-6 md:px-12 relative">
+        <!-- Particle background -->
+        <div id="particles-contact" class="absolute inset-0 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-3 gap-16 items-start">
+                <!-- Contact Info (Left Column - Wider) -->
+                <div class="lg:col-span-1 space-y-10">
+                    <div class="space-y-3">
+                        <h2 class="text-4xl font-bold"><span class="text-red-600">Let's</span> Build Something</h2>
+                        <p class="text-sm text-gray-500 leading-relaxed">Open to collaboration, internships, and full-time opportunities</p>
+                        <p class="text-gray-400 leading-relaxed text-sm">Interested in working together? I'd love to hear from you.</p>
+                    </div>
+                    
+                    <!-- Contact Details -->
+                    <div class="space-y-5">
+                        <!-- Email (Primary) -->
+                        <div class="contact-item group">
+                            <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-red-600 text-lg group-hover:bg-red-600 group-hover:text-white transition-all duration-300 group-hover:scale-105">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-xs text-gray-600 uppercase tracking-widest mb-1.5 font-semibold">Email</p>
+                                <a href="mailto:adityaelango2004@gmail.com" class="text-sm font-bold text-white hover:text-red-400 transition-colors duration-200 break-all">adityaelango2004@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="contact-item group">
+                            <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-red-600 text-lg group-hover:bg-red-600 group-hover:text-white transition-all duration-300 group-hover:scale-105">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-xs text-gray-600 uppercase tracking-widest mb-1.5 font-semibold">Phone</p>
+                                <a href="tel:+919611202102" class="text-xs font-bold text-white hover:text-red-400 transition-colors duration-200">+91 9611202102</a>
+                            </div>
+                        </div>
+                        
+                        <!-- LinkedIn & GitHub (Icons with Text) -->
+                        <div class="flex gap-4 pt-5 border-t border-white/10">
+                            <a href="https://linkedin.com/in/aditya-elango" target="_blank" rel="noreferrer" class="contact-social-link flex items-center gap-2.5 group">
+                                <div class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-all duration-300 group-hover:scale-105">
+                                    <i class="fab fa-linkedin-in text-sm"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-500 group-hover:text-red-400 transition-colors duration-200">LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/AdityaElango" target="_blank" rel="noreferrer" class="contact-social-link flex items-center gap-2.5 group">
+                                <div class="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-all duration-300 group-hover:scale-105">
+                                    <i class="fab fa-github text-sm"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-500 group-hover:text-red-400 transition-colors duration-200">GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Resume CTA -->
+                    <div class="pt-8 border-t border-white/10">
+                        <p class="text-xs text-gray-600 uppercase tracking-widest mb-3.5 font-semibold">Prefer a Resume?</p>
+                        <a href="Aditya_Elango_Resume.pdf" download class="inline-flex items-center gap-2 text-xs font-semibold text-red-500 hover:text-red-400 transition-colors duration-200 group">
+                            <i class="fas fa-download group-hover:scale-110 transition-transform duration-200"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Right Column) -->
+                <div class="lg:col-span-2">
+                    <form class="contact-form bg-white/5 p-6 rounded-3xl border border-white/10 space-y-5" id="contactForm">
+                        <!-- Name Input -->
+                        <div class="contact-input-group relative">
+                            <input 
+                                type="text" 
+                                id="name"
+                                class="contact-input w-full bg-black border border-white/20 rounded-xl px-4 py-3 text-white placeholder-transparent focus:border-red-600 focus:outline-none transition-all duration-250 peer" 
+                                placeholder="Your name"
+                                autocomplete="name"
+                                required
+                            />
+                            <label for="name" class="contact-label">Your name</label>
+                        </div>
+                        
+                        <!-- Email Input -->
+                        <div class="contact-input-group relative">
+                            <input 
+                                type="email" 
+                                id="email"
+                                class="contact-input w-full bg-black border border-white/20 rounded-xl px-4 py-3 text-white placeholder-transparent focus:border-red-600 focus:outline-none transition-all duration-250 peer" 
+                                placeholder="Your email"
+                                autocomplete="email"
+                                required
+                            />
+                            <label for="email" class="contact-label">Your email</label>
+                        </div>
+                        
+                        <!-- Message Input -->
+                        <div class="contact-input-group relative">
+                            <textarea 
+                                id="message"
+                                rows="4"
+                                class="contact-input w-full bg-black border border-white/20 rounded-xl px-4 py-3 text-white placeholder-transparent focus:border-red-600 focus:outline-none transition-all duration-250 resize-none peer min-h-[120px]" 
+                                placeholder="Your message"
+                                required
+                            ></textarea>
+                            <label for="message" class="contact-label">What's on your mind?</label>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button 
+                            type="submit" 
+                            class="contact-submit w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-xl transition-all duration-250 transform hover:shadow-lg hover:shadow-red-600/30 active:scale-98 flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
+                        >
+                            <span>Send Message</span>
+                            <i class="fas fa-arrow-right transition-transform duration-250 group-hover:translate-x-1"></i>
+                        </button>
+                        
+                        <!-- Status Messages -->
+                        <div id="formMessage" class="text-xs text-center font-semibold hidden py-2"></div>
+                        
+                        <!-- Trust Line -->
+                        <p class="text-xs text-gray-600 text-center pt-1 opacity-80">
+                            <i class="fas fa-clock text-gray-500 mr-1"></i>Usually respond within 24–48 hours · No spam
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 Aditya Elango. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
