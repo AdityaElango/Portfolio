@@ -2336,5 +2336,100 @@ nav a.text-red-600::after {
     }
 }
 
+/* ====== MOBILE-ONLY HERO LAYOUT FIXES (768px and below) ====== */
+@media (max-width: 768px) {
+    /* Reduce hero vertical padding for compact mobile layout */
+    .hero-section {
+        padding-top: 80px;
+        padding-bottom: 48px;
+    }
 
+    /* Hide "Download Resume" button (still available in contact section) */
+    .hero-secondary-btn {
+        display: none;
+    }
 
+    /* Remove scroll-to-explore indicator for cleaner mobile view */
+    .mouse-container,
+    .scroll-to-explore {
+        display: none;
+    }
+
+    /* Condense trust signals: smaller, centered, less prominent */
+    .hero-trust {
+        font-size: 0.8rem;
+        opacity: 0.65;
+        text-align: center;
+        margin-top: 12px;
+        line-height: 1.4;
+    }
+
+    /* Improve primary CTA button spacing and size */
+    .hero-primary-btn {
+        width: 100%;
+        max-width: 320px;
+        margin: 16px auto 0;
+        padding: 12px 24px;
+    }
+
+    /* Center hero content text on mobile */
+    .hero-section > .max-w-7xl > .grid {
+        text-align: center;
+    }
+
+    /* Stack hero CTAs vertically and center on mobile */
+    .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ====== MOBILE-ONLY ABOUT SECTION FIXES ====== */
+
+    /* Add spacing below about image for breathing room */
+    .about-photo {
+        margin-bottom: 24px;
+    }
+
+    /* Reduce and improve about paragraph on mobile */
+    .about-paragraph {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        text-align: center;
+        margin-bottom: 16px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-line-clamp: 4;
+    }
+
+    /* Style the lead text better on mobile */
+    .about-paragraph-lead {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    /* Reduce emphasis text size on mobile */
+    .about-emphasis {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    /* Compact stats section on mobile */
+    .about-stats {
+        margin-top: 16px;
+        gap: 12px;
+    }
+
+    /* Reduce stat number size on mobile */
+    .about-stat-number {
+        font-size: 1.6rem;
+    }
+
+    /* Reduce stat label size and opacity on mobile */
+    .about-stat-label {
+        font-size: 0.7rem;
+        opacity: 0.7;
+    }
+}
