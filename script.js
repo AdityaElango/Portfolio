@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             impact: "Analyzes 100+ transactions per user with real-time anomaly detection and predictive budget recommendations",
             tags: ["React.js", "Node.js", "MongoDB", "Express.js"],
-            github: "https://budgetbuddyfinancenow.vercel.app/"
+            github: "https://github.com/AdityaElango"
         },
         'project-spark': {
             title: "News Article Clustering & Topic Modeling",
